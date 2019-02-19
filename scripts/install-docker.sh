@@ -6,7 +6,7 @@ command -v docker && exit 0 # Exit if docker already installed
 
 sudo apt-get update -q
 
-sudo apt-get upgrade -qq --force-yes
+#sudo apt-get upgrade -qq --force-yes
 
 sudo apt-get install -q -y \
       apt-transport-https \
