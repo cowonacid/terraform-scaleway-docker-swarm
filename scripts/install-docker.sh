@@ -4,11 +4,9 @@ set -e
 
 command -v docker && exit 0 # Exit if docker already installed
 
-export DEBIAN_FRONTEND=noninteractive
-
 sudo apt-get update
 
-sudo apt-get upgrade -q -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -yq
 
 sudo apt-get install -y \
       apt-transport-https \

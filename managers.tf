@@ -76,15 +76,15 @@ EOF
     destination="/opt/keys/manager"
   }
 
-//  provisioner "remote-exec" {
-//    script = "${path.module}/scripts/limits.sh"
-//  }
-//
-//  provisioner "remote-exec" {
-//    script = "${path.module}/scripts/install-docker.sh"
-//  }
-//
-//  provisioner "remote-exec" {
-//    script = "${path.module}/scripts/docker-init-or-join.sh"
-//  }
+  provisioner "remote-exec" {
+    script = "${path.module}/scripts/limits.sh"
+  }
+
+  provisioner "remote-exec" {
+    script = "${path.module}/scripts/install-docker.sh"
+  }
+
+  provisioner "remote-exec" {
+    script = "${path.module}/scripts/docker-init-or-join.sh"
+  }
 }
