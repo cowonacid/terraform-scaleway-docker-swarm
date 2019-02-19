@@ -4,11 +4,11 @@ set -e
 
 command -v docker && exit 0 # Exit if docker already installed
 
-sudo apt-get update
+sudo apt-get update -q
 
-sudo apt-get upgrade -y
+sudo apt-get upgrade -y -qq
 
-sudo apt-get install -y \
+sudo apt-get install -y -q \
       apt-transport-https \
       ca-certificates \
       curl \
@@ -24,8 +24,8 @@ sudo add-apt-repository \
   $(lsb_release -cs) \
      stable"
 
-sudo apt-get update
-sudo apt-get install docker-ce -y
+sudo apt-get update -q
+sudo apt-get install docker-ce -y -q
 
 ROLE=$(cat /tmp/role)
 MANAGER_IP=$(cat /tmp/swarm_manager)
